@@ -18,7 +18,7 @@ def get_parser():
     OR = Word("OR")
     AND = Word("AND")
     ANDNOT = Word("ANDNOT")
-    OP = OR | AND | ANDNOT
+    OP = ANDNOT | OR | AND
     word = Word(alphas)
 
     OPRET = Forward()

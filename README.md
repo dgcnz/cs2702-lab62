@@ -19,6 +19,10 @@ python3 main.py
 [2]
 >> OR(AND(RET(frodo), RET(comunidad)), RET(mordor))
 [2, 3, 5]
+>> AND(RET(viaje), RET(anillo))
+[0, 2, 3, 4]
+>> ANDNOT(RET(viaje), RET(anillo))
+[5]
 ...
 ```
 
@@ -75,7 +79,7 @@ Parsing is done with pyparsing library according to this grammar:
 EXPR    := RET | OPRET
 RET     := RET ( word )
 OPRET   := OP ( EXPR , EXPR )
-OP      := AND | OR | ANDNOT
+OP      := ANDNOT | OR | AND
 ```
 
 Check parse.py for more details.
