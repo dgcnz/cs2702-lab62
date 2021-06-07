@@ -85,6 +85,11 @@ class InvertedIndex:
             return self.index[word]
         return []
 
+    def dump(self, filename: str):
+        with open(filename, 'w') as f:
+            for k, v in self.index.items():
+                f.write(f"{k}: {','.join([str(x) for x in v])}\n")
+
 
 def OR(a: List[int], b: List[int]) -> List[int]:
     ans = []

@@ -35,10 +35,7 @@ def execute(ast):
 
 
 parser = get_parser()
-# pprint.pprint(iix.indexed_words)
-
-x = parser.parseString("ANDNOT(RET(legolas), OR(RET(hobbit), RET(anillo)))")
-print(x)
+iix.dump("save.txt")
 
 while True:
     try:
