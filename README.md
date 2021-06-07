@@ -89,3 +89,10 @@ OP      := ANDNOT | OR | AND
 ```
 
 Check parse.py for more details.
+
+
+## Collaborators
+
+- Andrea Díaz - 201720031
+- Diego Cánez - 201710319
+- Maor Roizman - 201810323
