@@ -1,5 +1,27 @@
 # Lab 6.1: Inverted Index
 
+## Installation
+
+```bash
+pip3 install ntlk
+pip3 install pyparsing
+python3 -m nltk.downloader stopwords
+python3 -m nltk.downloader punkt
+```
+
+## Usage
+
+Run queries on the main program. Example:
+```bash
+python3 main.py
+...
+>> OR(AND(RET(frodo), RET(comunidad))
+[2]
+>> OR(AND(RET(frodo), RET(comunidad)), RET(mordor))
+[2, 3, 5]
+...
+```
+
 
 ## Preprocessor class
 
@@ -57,4 +79,3 @@ OP      := AND | OR | ANDNOT
 ```
 
 Check parse.py for more details.
-
