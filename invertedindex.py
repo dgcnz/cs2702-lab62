@@ -22,7 +22,7 @@ class Preprocessor:
     def clean(self, word: str):
         return self.stemmer.stem(word.lower())
 
-    def normalize(self, document: str):
+    def clean_text(self, document: str):
         tokens = word_tokenize(document)
         return [self.clean(tkn) for tkn in tokens if self.valid(tkn)]
 
@@ -39,7 +39,7 @@ def preprocess(f):
 
 def build_inverted_index(documents: List[str], p: Preprocessor, k: int):
     word_cnt = Counter()
-    tokenized_docs = [p.normalize(doc) for doc in documents]
+    tokenized_docs = [p.clean_text(doc) for doc in documents]
     for doc in tokenized_docs:
         for tkn in doc:
             word_cnt[tkn] += 1

@@ -1,15 +1,10 @@
-from pyparsing import Forward, Word, alphas, alphanums, nums, ZeroOrMore, Literal, Suppress, delimitedList, Optional, Group
-import pprint
+from pyparsing import Forward, Word, alphas, Suppress, Optional, Group
 
 
 def tag(name):
-    """This version converts ["expr", 4] => 4
-       comment in the version below to see the original parse tree
-    """
     def tagfn(tokens):
         tklist = tokens.asList()
         if name == 'expr' and len(tklist) == 1:
-            # LL1 artifact removal
             return tklist
         return tuple([name] + tklist)
 
