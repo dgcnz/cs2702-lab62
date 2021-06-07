@@ -54,6 +54,11 @@ build_inverted_index(documents: List[str], p: Preprocessor, k: int) -> InvertedI
 InvertedIndex.sources(word: str) -> List[int]
 ```
 
+```python
+# Dumps inverted index into a file
+InvertedIndex.dump(filename: str)
+```
+
 ## Operators
 
 ```python

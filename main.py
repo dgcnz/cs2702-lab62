@@ -41,7 +41,6 @@ while True:
     try:
         line = input(">> ")
         ast = list(parser.parseString(line))
-        print(ast)
         res = execute(ast)[0]
         print(res)
     except Exception:
