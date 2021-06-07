@@ -53,6 +53,7 @@ Parsing is done with pyparsing library according to this grammar:
 EXPR    := RET | OPRET
 RET     := RET ( word )
 OPRET   := OP ( EXPR , EXPR )
+OP      := AND | OR | ANDNOT
 ```
 
 Check parse.py for more details.
