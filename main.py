@@ -35,11 +35,16 @@ def execute(ast):
 
 
 parser = get_parser()
+# pprint.pprint(iix.indexed_words)
+
+x = parser.parseString("ANDNOT(RET(legolas), OR(RET(hobbit), RET(anillo)))")
+print(x)
 
 while True:
     try:
         line = input(">> ")
         ast = list(parser.parseString(line))
+        print(ast)
         res = execute(ast)[0]
         print(res)
     except Exception:

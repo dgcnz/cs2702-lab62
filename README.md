@@ -15,14 +15,15 @@ Run queries on the main program. Example:
 ```bash
 python3 main.py
 ...
->> OR(AND(RET(frodo), RET(comunidad))
-[2]
+
+>> RET(frodo)
+[0, 1, 2, 3, 4, 5]
+>> OR(ANDNOT(RET(frodo), RET(legolas)), RET(legolas))
+[0, 1, 2, 3, 4, 5]
 >> OR(AND(RET(frodo), RET(comunidad)), RET(mordor))
 [2, 3, 5]
->> AND(RET(viaje), RET(anillo))
-[0, 2, 3, 4]
->> ANDNOT(RET(viaje), RET(anillo))
-[5]
+>> AND(RET(legolas), OR(RET(hobbit), RET(anillo)))
+[1, 2]
 ...
 ```
 
