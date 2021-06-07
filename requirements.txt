@@ -1,0 +1,4 @@
+nltk==3.6.2
+prettyprinter==0.18.0
+pylint==2.8.3
+pyparsing==2.4.7
