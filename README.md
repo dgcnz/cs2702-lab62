@@ -21,9 +21,9 @@ python3 main.py
 >> OR(ANDNOT(RET(frodo), RET(legolas)), RET(legolas))
 [0, 1, 2, 3, 4, 5]
 >> OR(AND(RET(frodo), RET(comunidad)), RET(mordor))
-[2, 3, 5]
+[1, 3, 4]
 >> AND(RET(legolas), OR(RET(hobbit), RET(anillo)))
-[1, 2]
+[]
 ...
 ```
 
