@@ -6,6 +6,7 @@ import pprint
 p = Preprocessor()
 
 files = glob.glob("docs/*.txt")
+files.sort()
 docs = []
 for file in files:
     with open(file, 'r') as f:
